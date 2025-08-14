@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(24 9% 11%);
+  --card: hsl(37 27% 94%);
+  --card-foreground: hsl(24 9% 11%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(24 9% 11%);
+  --primary: hsl(18 58% 32%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(43 74% 49%);
+  --secondary-foreground: hsl(24 9% 11%);
+  --muted: hsl(37 27% 94%);
+  --muted-foreground: hsl(24 9% 11%);
+  --accent: hsl(37 27% 94%);
+  --accent-foreground: hsl(18 58% 32%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(37 20% 85%);
+  --input: hsl(37 27% 96%);
+  --ring: hsl(18 58% 32%);
+  --chart-1: hsl(18 58% 32%);
+  --chart-2: hsl(159 100% 36%);
+  --chart-3: hsl(42 93% 56%);
+  --chart-4: hsl(147 79% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(37 27% 94%);
+  --sidebar-foreground: hsl(24 9% 11%);
+  --sidebar-primary: hsl(18 58% 32%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(37 27% 94%);
+  --sidebar-accent-foreground: hsl(18 58% 32%);
+  --sidebar-border: hsl(37 20% 85%);
+  --sidebar-ring: hsl(18 58% 32%);
+  --font-sans: Inter, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  
+  /* Custom Jotah Brand Colors */
+  --saddle-brown: hsl(18 58% 32%);
+  --goldenrod: hsl(43 74% 49%);
+  --warm-cream: hsl(37 27% 94%);
+  --dark-brown: hsl(24 51% 9%);
+  --peru-gold: hsl(30 56% 53%);
+  --cornsilk: hsl(48 100% 93%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(37 27% 94%);
+  --card: hsl(24 51% 9%);
+  --card-foreground: hsl(37 27% 94%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(37 27% 94%);
+  --primary: hsl(18 58% 32%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(43 74% 49%);
+  --secondary-foreground: hsl(24 9% 11%);
+  --muted: hsl(24 51% 9%);
+  --muted-foreground: hsl(37 20% 65%);
+  --accent: hsl(24 51% 9%);
+  --accent-foreground: hsl(43 74% 49%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(24 30% 20%);
+  --input: hsl(24 40% 15%);
+  --ring: hsl(18 58% 32%);
+  --sidebar: hsl(24 51% 9%);
+  --sidebar-foreground: hsl(37 27% 94%);
+  --sidebar-primary: hsl(18 58% 32%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(24 51% 9%);
+  --sidebar-accent-foreground: hsl(43 74% 49%);
+  --sidebar-border: hsl(24 30% 20%);
+  --sidebar-ring: hsl(18 58% 32%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-saddle-brown {
+    color: var(--saddle-brown);
+  }
+  
+  .text-goldenrod {
+    color: var(--goldenrod);
+  }
+  
+  .text-warm-cream {
+    color: var(--warm-cream);
+  }
+  
+  .text-dark-brown {
+    color: var(--dark-brown);
+  }
+  
+  .text-peru-gold {
+    color: var(--peru-gold);
+  }
+  
+  .bg-saddle-brown {
+    background-color: var(--saddle-brown);
+  }
+  
+  .bg-goldenrod {
+    background-color: var(--goldenrod);
+  }
+  
+  .bg-warm-cream {
+    background-color: var(--warm-cream);
+  }
+  
+  .bg-dark-brown {
+    background-color: var(--dark-brown);
+  }
+  
+  .bg-peru-gold {
+    background-color: var(--peru-gold);
+  }
+  
+  .bg-cornsilk {
+    background-color: var(--cornsilk);
+  }
+  
+  .border-saddle-brown {
+    border-color: var(--saddle-brown);
+  }
+  
+  .border-goldenrod {
+    border-color: var(--goldenrod);
+  }
+  
+  .hover\:bg-peru-gold:hover {
+    background-color: var(--peru-gold);
+  }
+  
+  .hover\:bg-dark-brown:hover {
+    background-color: var(--dark-brown);
+  }
+  
+  .hover\:text-saddle-brown:hover {
+    color: var(--saddle-brown);
+  }
+  
+  .hover\:text-goldenrod:hover {
+    color: var(--goldenrod);
+  }
+}
